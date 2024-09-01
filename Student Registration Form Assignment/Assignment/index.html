@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Student Registration Form</title>
+</head>
+<body class="bg-white text-white">
+    <!-- Header section -->
+    <header class="bg-blue-500 text-white py-10">
+        <h1 class="text-5xl text-center font-extrabold">Student Registration System</h1>
+        <article id="Description" class="text-xl ml-auto mr-auto mt-10 w-3/4 text-center">
+            Designed to improve the efficiency of student enrollment and administration, the Student Registration System provides a convenient way for administrators to input new student details. 
+            This includes capturing vital information such as the student's name, date of birth, student ID, roll number, and contact information. 
+            The system is crafted to streamline the registration process and facilitate the management of student records, offering a more organized and accessible database
+        </article>
+    </header>
+    <!--  Main Section -->
+    <section class="w-3/4 m-10 ml-auto mr-auto">
+        <!-- Navigation bar to navigate between Student Registartion Section and Student Details Section  -->
+        <nav class="flex justify-center">
+            <button id="registration-Btn" class="flex bg-blue-500 font-bold focus:bg-gray-600 text-white hover:bg-gray-600 rounded-md border mr-5 p-2">
+                <img src="src/assets/form.png" alt="Student registration button" class="invert h-10 mr-1">
+                Student Registration
+            </button>
+            <button id="Details-Btn" class="flex bg-blue-500 font-bold focus:bg-gray-600 text-white hover:bg-gray-600 rounded-md border p-2">
+                <img src="src/assets/details.png" alt="Student details button" class="invert h-10 mr-1">
+                Student Details
+            </button>
+        </nav>
+        <!-- Student Details Form filling -->
+        <form class="flex flex-col bg-blue-500 p-6 font-bold rounded-md mt-5">
+            <label for="Name">Student Name</label>
+            <input id="Name" class="text-black h-11 p-2 rounded-md mt-1 mb-5" type="text" placeholder="Full Name" required>
+            <label for="ID">Student ID</label>
+            <input id="ID" class="rounded-md text-black mb-5 h-11 mt-1 p-2" name="ID" type="number" placeholder="Student ID" required>
+            <label for="class">Class</label>
+            <input id="Class" class="rounded-md mb-5 h-10 mt-1 text-black p-2" name="class" type="text" placeholder="Class" required>
+            <label for="Roll-No.">Roll No.</label>
+            <input id="Roll-No." class="rounded-md text-black mb-5 h-10 mt-1 p-2" name="Roll-No." type="text" placeholder="Roll No." required>
+            <div id="gender" class="mb-5">
+                <h3>Gender</h3>
+                <ul>
+                    <li>
+                        <input id="Male"  type="radio" value="Male" name="gender" required>
+                        <label for="Male">Male</label>
+                    </li>
+                    <li>
+                        <input id="Female" type="radio" value="Female" name="gender" required>
+                        <label for="Female">Female</label>
+                    </li>
+                </ul>
+            </div>
+            <label for="Contact-No.">Student Contact Number</label>
+            <input id="Contact-No."  class="rounded-md text-black mb-5 h-10 mt-1 p-2" name="contact" type="number" placeholder="Contact Number" required>
+            <label for="Email">Student Email ID</label>
+            <input id="Email"  class="rounded-md text-black mb-5 h-10 mt-1 p-2" name="Email" type="email" placeholder="Email ID" required>
+            <button id="submitBtn" type="submit" class="font-semibold text-black px-3 py-3 bg-white border-2 border-black rounded-full hover:text-white bg-purple-2 hover:bg-green-500 transition-all m-auto w-52">Submit</button>
+        </form>
+    </section>
+    <!-- Student Details Table -->
+    <section id="Table-Container" class="max-h-screen overflow-auto ">
+        <table id="Table" class=" bg-blue-500 rounded-md w-3/4 mt-10 mr-auto ml-auto font-bold ">
+            <thead>
+                <tr class="border-b-2 border-white ">
+                    <th class="border-r border-white">Name</th>
+                    <th class="border-r border-white">ID</th>
+                    <th class="border-r border-white">Roll No.</th>
+                    <th class="border-r border-white">Class</th>
+                    <th class="border-r border-white">Gender</th>
+                    <th class="border-r border-white">Contact No.</th>
+                    <th class="border-r border-white">Email ID</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </section>
+    <script src="src/script.js"></script>
+</body>
+</html>

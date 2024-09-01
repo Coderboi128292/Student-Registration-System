@@ -1,0 +1,3 @@
+Used a CDN link or CDN URL in my project. It points to a hosted version of Tailwind CSS on a Content Delivery Network, allowing you to include the stylesheet directly in your HTML file without needing to download and host the CSS file yourself.
+
+You will need an internet connection to run this file.
